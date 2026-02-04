@@ -1,0 +1,2 @@
+class ContextViolation(Exception):
+    pass

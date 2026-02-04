@@ -1,0 +1,2 @@
+class ReversalAttempt(Exception):
+    pass

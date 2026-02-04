@@ -1,0 +1,2 @@
+class UncontainedFailure(Exception):
+    pass
