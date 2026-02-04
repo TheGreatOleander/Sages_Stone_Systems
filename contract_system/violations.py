@@ -1,0 +1,2 @@
+class ContractViolation(Exception):
+    pass
