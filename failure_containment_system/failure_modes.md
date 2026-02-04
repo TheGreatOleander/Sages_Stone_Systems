@@ -1,0 +1,2 @@
+- Cascade failure
+- Masked failure

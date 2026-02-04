@@ -1,0 +1,2 @@
+- report(failure)
+- isolate(scope)

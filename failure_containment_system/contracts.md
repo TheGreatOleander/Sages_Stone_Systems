@@ -1,0 +1,2 @@
+- Failures are classified
+- No silent corruption
