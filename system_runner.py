@@ -1,104 +1,45 @@
 """
 System Runner
 
-Orchestrates evaluation across multiple Canonical Stone systems.
-
-Responsibilities:
-- Maintain ordered list of systems
-- Evaluate an action against each system
-- Short-circuit on first violation
-- Return unified result
-
-This file does NOT:
-- Interpret meaning
-- Execute actions
-- Modify systems
+Coordinates initialization and execution of runtime systems
+using dependency-aware ordering.
 """
 
-from dataclasses import dataclass
-from typing import List, Dict, Any, Optional
-
-
-# ---------------------------------------------------------------------
-# Canonical Result Types (mirrors existing systems)
-# ---------------------------------------------------------------------
-
-@dataclass(frozen=True)
-class ConstraintViolation:
-    system: str
-    rule: str
-    message: str
-
-
-@dataclass(frozen=True)
-class SystemResult:
-    ok: bool
-    violation: Optional[ConstraintViolation] = None
-
-
-# ---------------------------------------------------------------------
-# System Interface (implicit, not enforced)
-# ---------------------------------------------------------------------
-# A system is expected to expose:
-#   - get_identity() -> str
-#   - evaluate(action: Dict[str, Any]) -> SystemResult
-#
-# This runner deliberately does NOT require inheritance.
-# Duck typing keeps stones independent.
-# ---------------------------------------------------------------------
+from system_registry import registry
+from system_loader import load_all_systems
+from system_dependency_graph import SystemDependencyGraph
 
 
 class SystemRunner:
-    """
-    Runs an action through an ordered chain of systems.
-    """
+    def __init__(self):
+        self.registry = registry
+        self.graph = SystemDependencyGraph()
 
-    def __init__(self, systems: List[Any]):
-        self._systems = systems
+    def initialize(self):
+        load_all_systems()
 
-    def evaluate(self, action: Dict[str, Any]) -> SystemResult:
-        """
-        Evaluate an action against all systems.
+        for name in self.registry.list_systems():
+            system = self.registry.get(name)
+            self.graph.add_system(system)
 
-        Stops on first failure.
-        """
+        ordered_systems = self.graph.resolve_execution_order()
 
-        for system in self._systems:
-            result = system.evaluate(action)
+        for system in ordered_systems:
+            if hasattr(system, "initialize"):
+                system.initialize()
 
-            if not result.ok:
-                return result
+    def execute(self, context):
+        ordered_systems = self.graph.resolve_execution_order()
 
-        return SystemResult(ok=True)
+        for system in ordered_systems:
+            system.execute(context)
+
+    def shutdown(self):
+        ordered_systems = reversed(self.graph.resolve_execution_order())
+
+        for system in ordered_systems:
+            if hasattr(system, "shutdown"):
+                system.shutdown()
 
 
-# ---------------------------------------------------------------------
-# Example Usage (non-executing reference)
-# ---------------------------------------------------------------------
-
-if __name__ == "__main__":
-    # Example only — safe to delete
-
-    from authority_boundary.system import AuthorityBoundarySystem
-
-    runner = SystemRunner(
-        systems=[
-            AuthorityBoundarySystem(),
-            # Other systems plug in here
-        ]
-    )
-
-    action = {
-        "authority": "read:user_data",
-        "allowed_authority": "read"
-    }
-
-    result = runner.evaluate(action)
-
-    if result.ok:
-        print("Action passed all constraints.")
-    else:
-        print(
-            f"Violation in {result.violation.system}: "
-            f"{result.violation.rule} — {result.violation.message}"
-        )
+runner = SystemRunner()
