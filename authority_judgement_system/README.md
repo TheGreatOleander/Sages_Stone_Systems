@@ -1,4 +1,4 @@
-# execution_context_system
+# authority_judgement_system
 
 Purpose:
 Defines authoritative execution behavior and invariant enforcement.
