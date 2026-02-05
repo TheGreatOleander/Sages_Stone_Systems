@@ -1,0 +1,3 @@
+
+class TrafficSchema:
+    domain = "traffic"

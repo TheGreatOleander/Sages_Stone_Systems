@@ -1,0 +1,3 @@
+
+class InformationSchema:
+    domain = "information"

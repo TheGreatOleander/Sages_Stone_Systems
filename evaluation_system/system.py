@@ -1,29 +1,10 @@
-"""
-Evaluation System
+from .schema import SystemSchema
 
-Charter:
-- No side effects
-- No authority
-- No execution
-"""
+class System:
+    schema = SystemSchema(name=__name__)
 
-from .schema import EvaluationResult
+    def register(self, registry):
+        registry.register(self)
 
-class EvaluationSystem:
-    name = "evaluation_system"
-
-    def evaluate(self, subject: str, data: dict) -> EvaluationResult:
-        """
-        Perform a neutral evaluation.
-
-        This default implementation is intentionally minimal.
-        """
-        metrics = {
-            "completeness": float(bool(data)),
-            "consistency": 1.0
-        }
-        return EvaluationResult(
-            subject=subject,
-            metrics=metrics,
-            notes="Baseline neutral evaluation"
-        )
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

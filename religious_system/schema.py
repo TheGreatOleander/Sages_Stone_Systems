@@ -1,0 +1,3 @@
+
+class ReligiousSchema:
+    domain = "religious"

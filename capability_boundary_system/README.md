@@ -1,3 +1,3 @@
-# capability_boundary_system
+# Placeholder System
 
-Defines absolute capability ceilings independent of authority.
+Intentionally minimal system stub.

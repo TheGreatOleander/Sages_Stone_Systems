@@ -1,0 +1,3 @@
+
+class ArtSchema:
+    domain = "art"

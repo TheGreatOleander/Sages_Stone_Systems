@@ -1,3 +1,3 @@
-class Schema:
-    """Canonical schema for the system."""
-    pass
+
+class WeatherSchema:
+    domain = "weather"

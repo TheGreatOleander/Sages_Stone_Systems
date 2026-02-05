@@ -1,3 +1,3 @@
-# memory_system
+# Memory System
 
-This system is a completed, reference-grade Sages_Stone system.
+Auto-filled placeholder.

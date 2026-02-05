@@ -1,0 +1,3 @@
+
+class NetworkSchema:
+    domain = "network"

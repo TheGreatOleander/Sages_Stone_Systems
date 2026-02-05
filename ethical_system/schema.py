@@ -1,0 +1,3 @@
+
+class EthicalSchema:
+    domain = "ethical"

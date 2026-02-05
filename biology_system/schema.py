@@ -1,0 +1,3 @@
+
+class BiologySchema:
+    domain = "biology"

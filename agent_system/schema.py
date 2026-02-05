@@ -1,0 +1,3 @@
+
+class AgentSchema:
+    domain = "agent"

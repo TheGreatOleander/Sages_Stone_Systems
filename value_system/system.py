@@ -1,7 +1,9 @@
-from .schema import ValueProfile
+
+from .schema import ValueSchema
 
 class ValueSystem:
-    name = "value_system"
+    def __init__(self):
+        self.schema = ValueSchema()
 
-    def default_profile(self) -> ValueProfile:
-        return ValueProfile(weights={})
+    def evaluate(self, intent: dict) -> dict:
+        return {"domain": "value", "status": "placeholder", "intent": intent}

@@ -1,1 +1,1 @@
-\n
+from .system import System

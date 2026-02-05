@@ -1,0 +1,3 @@
+
+class CognitionSchema:
+    domain = "cognition"

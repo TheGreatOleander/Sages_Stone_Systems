@@ -1,3 +1,3 @@
-# evaluation_system
+# Placeholder System
 
-Neutral assessment layer. No execution, no authority.
+Intentionally minimal system stub.

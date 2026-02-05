@@ -1,9 +1,10 @@
-from .schema import ResolvedIntent
+from .schema import SystemSchema
 
-class IntentResolutionSystem:
-    name = "intent_resolution_system"
+class System:
+    schema = SystemSchema(name=__name__)
 
-    def resolve(self, intents: list[str]) -> ResolvedIntent:
-        if not intents:
-            raise ValueError("No intents provided")
-        return ResolvedIntent(chosen=intents[0], deferred=intents[1:])
+    def register(self, registry):
+        registry.register(self)
+
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

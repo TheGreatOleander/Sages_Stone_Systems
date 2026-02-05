@@ -1,0 +1,3 @@
+
+class SimulationSchema:
+    domain = "simulation"

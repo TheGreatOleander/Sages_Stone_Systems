@@ -1,3 +1,3 @@
-# meta_system
+# Placeholder System
 
-Explicit meta-level coordination. Sparse by design.
+Intentionally minimal system stub.

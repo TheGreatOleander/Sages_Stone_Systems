@@ -1,0 +1,3 @@
+
+class MarketSchema:
+    domain = "market"

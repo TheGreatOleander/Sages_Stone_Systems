@@ -1,0 +1,3 @@
+
+class EducationSchema:
+    domain = "education"

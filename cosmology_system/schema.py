@@ -1,0 +1,3 @@
+
+class CosmologySchema:
+    domain = "cosmology"

@@ -1,0 +1,3 @@
+
+class SocialSchema:
+    domain = "social"

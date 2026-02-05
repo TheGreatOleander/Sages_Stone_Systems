@@ -1,0 +1,3 @@
+
+class EpidemiologySchema:
+    domain = "epidemiology"

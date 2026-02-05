@@ -1,3 +1,3 @@
-# value_system
+# Value System
 
-Weighted values distinct from ethical rules.
+Auto-filled placeholder.

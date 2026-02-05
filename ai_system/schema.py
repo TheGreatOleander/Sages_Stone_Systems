@@ -1,0 +1,3 @@
+
+class AiSchema:
+    domain = "ai"

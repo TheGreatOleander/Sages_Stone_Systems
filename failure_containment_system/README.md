@@ -1,5 +1,3 @@
-Failure Containment System
-==========================
+# Placeholder System
 
-Defines how failures are isolated, classified, and prevented from cascading.
-Failure is expected. Collapse is not.
+Intentionally minimal system stub.

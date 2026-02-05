@@ -1,0 +1,3 @@
+
+class LegalSchema:
+    domain = "legal"

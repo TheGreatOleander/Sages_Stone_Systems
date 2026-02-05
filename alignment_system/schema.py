@@ -1,0 +1,3 @@
+
+class AlignmentSchema:
+    domain = "alignment"

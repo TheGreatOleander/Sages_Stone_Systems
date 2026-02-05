@@ -1,0 +1,3 @@
+
+class MusicSchema:
+    domain = "music"

@@ -1,9 +1,9 @@
-from .schema import Schema
-from .rules import Rules
-from .executor import Executor
 
-class System:
+from .schema import WeatherSchema
+
+class WeatherSystem:
     def __init__(self):
-        self.schema = Schema()
-        self.rules = Rules()
-        self.executor = Executor()
+        self.schema = WeatherSchema()
+
+    def evaluate(self, intent: dict) -> dict:
+        return {"domain": "weather", "status": "placeholder", "intent": intent}

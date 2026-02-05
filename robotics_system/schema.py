@@ -1,0 +1,3 @@
+
+class RoboticsSchema:
+    domain = "robotics"

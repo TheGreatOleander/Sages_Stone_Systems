@@ -1,3 +1,3 @@
-# weather_system
+# Weather System
 
-This system is a completed, reference-grade Sages_Stone system.
+Auto-filled placeholder.

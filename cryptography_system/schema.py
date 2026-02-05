@@ -1,0 +1,3 @@
+
+class CryptographySchema:
+    domain = "cryptography"

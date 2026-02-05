@@ -1,3 +1,3 @@
-# intent_resolution_system
+# Placeholder System
 
-Resolves conflicts between multiple valid intents.
+Intentionally minimal system stub.

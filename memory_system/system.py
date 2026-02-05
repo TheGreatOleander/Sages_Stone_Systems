@@ -1,9 +1,9 @@
-from .schema import Schema
-from .rules import Rules
-from .executor import Executor
 
-class System:
+from .schema import MemorySchema
+
+class MemorySystem:
     def __init__(self):
-        self.schema = Schema()
-        self.rules = Rules()
-        self.executor = Executor()
+        self.schema = MemorySchema()
+
+    def evaluate(self, intent: dict) -> dict:
+        return {"domain": "memory", "status": "placeholder", "intent": intent}

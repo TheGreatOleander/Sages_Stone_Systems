@@ -1,0 +1,3 @@
+
+class SecuritySchema:
+    domain = "security"

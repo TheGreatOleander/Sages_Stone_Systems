@@ -1,0 +1,3 @@
+
+class ClimateSchema:
+    domain = "climate"

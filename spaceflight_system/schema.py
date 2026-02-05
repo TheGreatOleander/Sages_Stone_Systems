@@ -1,0 +1,3 @@
+
+class SpaceflightSchema:
+    domain = "spaceflight"

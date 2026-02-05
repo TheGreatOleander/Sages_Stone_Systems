@@ -1,0 +1,3 @@
+
+class MedicineSchema:
+    domain = "medicine"

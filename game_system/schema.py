@@ -1,0 +1,3 @@
+
+class GameSchema:
+    domain = "game"

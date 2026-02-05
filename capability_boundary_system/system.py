@@ -1,7 +1,10 @@
-from .schema import CapabilityBoundary
+from .schema import SystemSchema
 
-class CapabilityBoundarySystem:
-    name = "capability_boundary_system"
+class System:
+    schema = SystemSchema(name=__name__)
 
-    def boundaries(self) -> CapabilityBoundary:
-        return CapabilityBoundary(prohibited_capabilities=set())
+    def register(self, registry):
+        registry.register(self)
+
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

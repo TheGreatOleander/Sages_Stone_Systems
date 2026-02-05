@@ -1,0 +1,3 @@
+
+class GovernanceSchema:
+    domain = "governance"

@@ -1,0 +1,3 @@
+
+class GeneticsSchema:
+    domain = "genetics"

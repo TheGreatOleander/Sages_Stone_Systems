@@ -1,9 +1,9 @@
-from .schema import Schema
-from .rules import Rules
-from .executor import Executor
 
-class System:
+from .schema import TimeSchema
+
+class TimeSystem:
     def __init__(self):
-        self.schema = Schema()
-        self.rules = Rules()
-        self.executor = Executor()
+        self.schema = TimeSchema()
+
+    def evaluate(self, intent: dict) -> dict:
+        return {"domain": "time", "status": "placeholder", "intent": intent}

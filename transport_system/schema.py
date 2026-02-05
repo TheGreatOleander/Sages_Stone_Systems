@@ -1,0 +1,3 @@
+
+class TransportSchema:
+    domain = "transport"

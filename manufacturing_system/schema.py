@@ -1,0 +1,3 @@
+
+class ManufacturingSchema:
+    domain = "manufacturing"

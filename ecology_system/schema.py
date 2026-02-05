@@ -1,0 +1,3 @@
+
+class EcologySchema:
+    domain = "ecology"

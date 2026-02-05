@@ -1,6 +1,6 @@
 from dataclasses import dataclass
-from typing import Set
 
-@dataclass(frozen=True)
-class CapabilityBoundary:
-    prohibited_capabilities: Set[str]
+@dataclass
+class SystemSchema:
+    name: str
+    version: str = '0.0.1'

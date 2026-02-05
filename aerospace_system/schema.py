@@ -1,0 +1,3 @@
+
+class AerospaceSchema:
+    domain = "aerospace"

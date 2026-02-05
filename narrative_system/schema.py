@@ -1,0 +1,3 @@
+
+class NarrativeSchema:
+    domain = "narrative"

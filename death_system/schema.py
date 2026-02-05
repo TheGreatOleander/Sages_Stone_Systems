@@ -1,0 +1,3 @@
+
+class DeathSchema:
+    domain = "death"

@@ -1,20 +1,46 @@
 .
 ├── LICENSE
+├── LabyrinthGate.py
+├── LabyrinthSystem.py
 ├── README.md
 ├── SYSTEM_CHARTER.md
+├── Sages_Stone_Systems.zip
+├── __init__.py
 ├── action_schema.py
 ├── actor_schema.py
 ├── aerospace_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── agent_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── ai_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── alignment_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── art_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── audit_log_system.py
+├── audit_trace_adapter.py
 ├── authority_boundary
 │   ├── README.md
 │   ├── __init__.py
 │   ├── authority_boundary_system.py
 │   └── system.py
+├── authority_boundary_system.py
 ├── authority_judgement_system
 │   ├── README.md
 │   ├── __init__.py
@@ -25,35 +51,90 @@
 │   └── violations.py
 ├── authority_judgement_system.py
 ├── biology_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
+├── boundaries.md
 ├── capability_boundary_system
 │   ├── README.md
 │   ├── __init__.py
 │   ├── schema.py
 │   └── system.py
 ├── climate_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── cognition_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── contract_system
 │   ├── README.md
 │   ├── __init__.py
 │   ├── executor.py
 │   ├── rules.py
 │   ├── schema.py
+│   ├── system.py
 │   ├── tests
 │   │   ├── invalid_contract.py
 │   │   └── valid_contract.py
 │   └── violations.py
+├── contract_system.py
+├── contracts.md
 ├── cosmology_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── cryptography_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
 │   └── system.py
 ├── data_boundry
 │   └── system.py
 ├── death_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
+├── demo_canonical_suite.py
+├── demo_contract_system.py
+├── demo_multi_domain.py
+├── demo_runtime_selection.py
 ├── ecology_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── economic_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── education_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── energy_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── epidemiology_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── ethical_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── evaluation_system
 │   ├── README.md
 │   ├── __init__.py
@@ -65,11 +146,17 @@
 │   │   ├── contract_system.py
 │   │   ├── test_valid.py
 │   │   └── test_violations.py
-│   └── quantum_system
-│       ├── README.md
-│       ├── quantum_system.py
-│       ├── test_valid.py
-│       └── test_violations.py
+│   ├── demo_canonical_suite.py
+│   ├── demo_contract_system.py
+│   ├── demo_multi_domain.py
+│   ├── demo_runtime_selection.py
+│   ├── quantum_system
+│   │   ├── README.md
+│   │   ├── quantum_system.py
+│   │   ├── test_valid.py
+│   │   └── test_violations.py
+│   ├── run_time_now.py
+│   └── runtime_demo.py
 ├── execution_context_system
 │   ├── README.md
 │   ├── __init__.py
@@ -83,8 +170,10 @@
 │   ├── schema.py
 │   ├── system.py
 │   └── violations.py
+├── executor.py
 ├── failure_containment_system
 │   ├── README.md
+│   ├── __init__.py
 │   ├── boundaries.md
 │   ├── contracts.md
 │   ├── executor.py
@@ -93,22 +182,46 @@
 │   ├── interfaces.md
 │   ├── rules.py
 │   ├── schema.py
+│   ├── system.py
 │   └── violations.py
+├── failure_modes.md
+├── future_runtime.md
 ├── game_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── genetics_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── governance_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── health_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── identity_system
 │   ├── README.md
 │   ├── __init__.py
 │   ├── executor.py
 │   ├── rules.py
 │   ├── schema.py
+│   ├── system.py
 │   ├── tests
 │   │   ├── invalid_identity.py
 │   │   └── valid_identity.py
 │   └── violations.py
 ├── information_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── intent_clairity
 │   └── system.py
 ├── intent_resolution_system
@@ -116,6 +229,9 @@
 │   ├── __init__.py
 │   ├── schema.py
 │   └── system.py
+├── interfaces.md
+├── invalid_contract.py
+├── invalid_identity.py
 ├── irreversibility_guard
 │   ├── README.md
 │   ├── __init__.py
@@ -129,12 +245,40 @@
 │   ├── LabyrinthSystem.py
 │   └── README.md
 ├── language_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── learning_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── legal_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── logistics_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── manufacturing_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── market_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── medicine_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── memory_system
 │   ├── README.md
 │   ├── __init__.py
@@ -144,43 +288,123 @@
 │   ├── system.py
 │   └── violations.py
 ├── meta_system
-│   └── README.md
-├── music_system
-├── mythology_system
-├── narrative_system
-├── network_system
-├── null_constraint
 │   ├── README.md
 │   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
+├── music_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
+├── mythology_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
+├── narrative_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
+├── network_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
+├── null_constraint_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
 │   └── system.py
 ├── observer_interface_system
 │   ├── README.md
+│   ├── __init__.py
 │   ├── boundaries.md
 │   ├── contracts.md
 │   ├── failure_modes.md
 │   ├── future_runtime.md
-│   └── interfaces.md
+│   ├── interfaces.md
+│   ├── schema.py
+│   └── system.py
 ├── physics_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── powergrid_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── quantum_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
+├── quantum_system.py
 ├── religious_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── robotics_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
+├── rules.py
+├── run_time_now.py
 ├── runtime_async_engine.py
 ├── runtime_context.py
+├── runtime_demo.py
 ├── runtime_dynamic_engine.py
 ├── runtime_engine.py
+├── runtime_entrypoint.py
 ├── runtime_event_bus.py
+├── runtime_governor.py
+├── runtime_guarded_engine.py
 ├── runtime_system.py
+├── schema.py
 ├── security_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── simulation_orchestrator.py
 ├── simulation_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── social_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── spaceflight_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── supplychain_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
+├── system.py
 ├── system_dependancy_graph.py
 ├── system_loader.py
 ├── system_registry.py
 ├── system_runner.py
+├── systems
+│   ├── runtime
+│   │   ├── runtime_guarded_engine.py
+│   │   └── runtime_system.py
+│   └── time
+│       └── time_system.py
+├── test_valid.py
+├── test_violations.py
 ├── time_system
 │   ├── README.md
 │   ├── __init__.py
@@ -189,14 +413,26 @@
 │   ├── schema.py
 │   ├── system.py
 │   └── violations.py
+├── time_system.py
 ├── traffic_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── transport_system
+│   ├── README.md
+│   ├── __init__.py
+│   ├── schema.py
+│   └── system.py
 ├── tree.txt
+├── valid_contract.py
+├── valid_identity.py
 ├── value_system
 │   ├── README.md
 │   ├── __init__.py
 │   ├── schema.py
 │   └── system.py
+├── violations.py
 └── weather_system
     ├── README.md
     ├── __init__.py
@@ -206,4 +442,4 @@
     ├── system.py
     └── violations.py
 
-71 directories, 136 files
+74 directories, 369 files
