@@ -1,1 +1,1 @@
-from .system import PhysicsSystem
+from .system import System

@@ -1,1 +1,1 @@
-from .system import GameSystem
+from .system import System

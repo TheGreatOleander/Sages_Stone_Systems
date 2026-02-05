@@ -1,1 +1,1 @@
-from .system import ManufacturingSystem
+from .system import System

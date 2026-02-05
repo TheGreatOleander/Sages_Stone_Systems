@@ -1,1 +1,1 @@
-from .system import LearningSystem
+from .system import System

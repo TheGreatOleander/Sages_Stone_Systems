@@ -1,1 +1,1 @@
-from .system import SupplychainSystem
+from .system import System

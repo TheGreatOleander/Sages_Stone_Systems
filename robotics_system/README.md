@@ -1,3 +1,3 @@
-# Robotics System
+# Placeholder System
 
-Auto-filled placeholder.
+Intentionally minimal system stub.

@@ -1,9 +1,10 @@
+from .schema import SystemSchema
 
-from .schema import SimulationSchema
+class System:
+    schema = SystemSchema(name=__name__)
 
-class SimulationSystem:
-    def __init__(self):
-        self.schema = SimulationSchema()
+    def register(self, registry):
+        registry.register(self)
 
-    def evaluate(self, intent: dict) -> dict:
-        return {"domain": "simulation", "status": "placeholder", "intent": intent}
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

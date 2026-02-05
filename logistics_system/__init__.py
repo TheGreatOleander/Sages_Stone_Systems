@@ -1,1 +1,1 @@
-from .system import LogisticsSystem
+from .system import System

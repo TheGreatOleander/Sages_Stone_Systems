@@ -1,1 +1,1 @@
-from .system import AlignmentSystem
+from .system import System

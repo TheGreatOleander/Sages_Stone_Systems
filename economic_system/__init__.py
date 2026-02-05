@@ -1,1 +1,1 @@
-from .system import EconomicSystem
+from .system import System

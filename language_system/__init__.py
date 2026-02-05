@@ -1,1 +1,1 @@
-from .system import LanguageSystem
+from .system import System

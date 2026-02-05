@@ -1,1 +1,1 @@
-from .system import CosmologySystem
+from .system import System

@@ -1,3 +1,3 @@
 
 class AgentSchema:
-    domain = "agent"
+    REQUIRED_FIELDS = ["name", "version"]

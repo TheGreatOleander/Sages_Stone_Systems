@@ -1,1 +1,1 @@
-from .system import NetworkSystem
+from .system import System

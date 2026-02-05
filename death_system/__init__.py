@@ -1,1 +1,1 @@
-from .system import DeathSystem
+from .system import System

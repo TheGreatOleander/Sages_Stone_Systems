@@ -1,3 +1,9 @@
+
 # Agent System
 
-Auto-filled placeholder.
+Reference implementation of a Stone-compatible system.
+
+Structure:
+- schema.py
+- invariants.py
+- lifecycle.py

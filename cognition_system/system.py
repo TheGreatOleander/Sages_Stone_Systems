@@ -1,9 +1,10 @@
+from .schema import SystemSchema
 
-from .schema import CognitionSchema
+class System:
+    schema = SystemSchema(name=__name__)
 
-class CognitionSystem:
-    def __init__(self):
-        self.schema = CognitionSchema()
+    def register(self, registry):
+        registry.register(self)
 
-    def evaluate(self, intent: dict) -> dict:
-        return {"domain": "cognition", "status": "placeholder", "intent": intent}
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

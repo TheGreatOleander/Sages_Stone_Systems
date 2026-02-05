@@ -1,1 +1,1 @@
-from .system import ReligiousSystem
+from .system import System

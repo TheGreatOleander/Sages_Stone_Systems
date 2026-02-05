@@ -1,9 +1,10 @@
+from .schema import SystemSchema
 
-from .schema import DeathSchema
+class System:
+    schema = SystemSchema(name=__name__)
 
-class DeathSystem:
-    def __init__(self):
-        self.schema = DeathSchema()
+    def register(self, registry):
+        registry.register(self)
 
-    def evaluate(self, intent: dict) -> dict:
-        return {"domain": "death", "status": "placeholder", "intent": intent}
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

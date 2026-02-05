@@ -1,1 +1,1 @@
-from .system import EcologySystem
+from .system import System

@@ -1,3 +1,6 @@
+from dataclasses import dataclass
 
-class NetworkSchema:
-    domain = "network"
+@dataclass
+class SystemSchema:
+    name: str
+    version: str = '0.0.1'

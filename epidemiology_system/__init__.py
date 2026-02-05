@@ -1,1 +1,1 @@
-from .system import EpidemiologySystem
+from .system import System

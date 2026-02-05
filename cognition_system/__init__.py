@@ -1,1 +1,1 @@
-from .system import CognitionSystem
+from .system import System

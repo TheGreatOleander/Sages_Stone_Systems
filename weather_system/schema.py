@@ -1,3 +1,6 @@
+from dataclasses import dataclass
 
-class WeatherSchema:
-    domain = "weather"
+@dataclass
+class SystemSchema:
+    name: str
+    version: str = '0.0.1'

@@ -1,9 +1,10 @@
+from .schema import SystemSchema
 
-from .schema import PhysicsSchema
+class System:
+    schema = SystemSchema(name=__name__)
 
-class PhysicsSystem:
-    def __init__(self):
-        self.schema = PhysicsSchema()
+    def register(self, registry):
+        registry.register(self)
 
-    def evaluate(self, intent: dict) -> dict:
-        return {"domain": "physics", "status": "placeholder", "intent": intent}
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

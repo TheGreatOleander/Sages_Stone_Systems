@@ -1,1 +1,1 @@
-from .system import MusicSystem
+from .system import System

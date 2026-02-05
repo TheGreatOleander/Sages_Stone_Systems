@@ -1,9 +1,10 @@
+from .schema import SystemSchema
 
-from .schema import ManufacturingSchema
+class System:
+    schema = SystemSchema(name=__name__)
 
-class ManufacturingSystem:
-    def __init__(self):
-        self.schema = ManufacturingSchema()
+    def register(self, registry):
+        registry.register(self)
 
-    def evaluate(self, intent: dict) -> dict:
-        return {"domain": "manufacturing", "status": "placeholder", "intent": intent}
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

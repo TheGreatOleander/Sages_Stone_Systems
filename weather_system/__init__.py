@@ -1,1 +1,1 @@
-from .system import WeatherSystem
+from .system import System

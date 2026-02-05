@@ -1,9 +1,10 @@
+from .schema import SystemSchema
 
-from .schema import NarrativeSchema
+class System:
+    schema = SystemSchema(name=__name__)
 
-class NarrativeSystem:
-    def __init__(self):
-        self.schema = NarrativeSchema()
+    def register(self, registry):
+        registry.register(self)
 
-    def evaluate(self, intent: dict) -> dict:
-        return {"domain": "narrative", "status": "placeholder", "intent": intent}
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

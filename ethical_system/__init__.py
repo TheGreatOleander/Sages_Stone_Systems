@@ -1,1 +1,1 @@
-from .system import EthicalSystem
+from .system import System

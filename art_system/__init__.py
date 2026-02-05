@@ -1,1 +1,1 @@
-from .system import ArtSystem
+from .system import System

@@ -1,1 +1,1 @@
-from .system import GeneticsSystem
+from .system import System

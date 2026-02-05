@@ -1,1 +1,1 @@
-from .system import EnergySystem
+from .system import System

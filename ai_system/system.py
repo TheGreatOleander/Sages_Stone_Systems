@@ -1,9 +1,10 @@
+from .schema import SystemSchema
 
-from .schema import AiSchema
+class System:
+    schema = SystemSchema(name=__name__)
 
-class AiSystem:
-    def __init__(self):
-        self.schema = AiSchema()
+    def register(self, registry):
+        registry.register(self)
 
-    def evaluate(self, intent: dict) -> dict:
-        return {"domain": "ai", "status": "placeholder", "intent": intent}
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

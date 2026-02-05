@@ -1,1 +1,1 @@
-from .system import SocialSystem
+from .system import System

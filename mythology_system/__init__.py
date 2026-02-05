@@ -1,1 +1,1 @@
-from .system import MythologySystem
+from .system import System

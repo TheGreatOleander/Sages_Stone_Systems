@@ -1,9 +1,10 @@
+from .schema import SystemSchema
 
-from .schema import AerospaceSchema
+class System:
+    schema = SystemSchema(name=__name__)
 
-class AerospaceSystem:
-    def __init__(self):
-        self.schema = AerospaceSchema()
+    def register(self, registry):
+        registry.register(self)
 
-    def evaluate(self, intent: dict) -> dict:
-        return {"domain": "aerospace", "status": "placeholder", "intent": intent}
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

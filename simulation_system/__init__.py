@@ -1,1 +1,1 @@
-from .system import SimulationSystem
+from .system import System

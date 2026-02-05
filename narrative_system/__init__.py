@@ -1,1 +1,1 @@
-from .system import NarrativeSystem
+from .system import System

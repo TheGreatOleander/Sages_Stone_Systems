@@ -1,3 +1,6 @@
+from dataclasses import dataclass
 
-class NarrativeSchema:
-    domain = "narrative"
+@dataclass
+class SystemSchema:
+    name: str
+    version: str = '0.0.1'

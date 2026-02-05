@@ -1,1 +1,1 @@
-from .system import TrafficSystem
+from .system import System

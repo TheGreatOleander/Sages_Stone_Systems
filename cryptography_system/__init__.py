@@ -1,1 +1,1 @@
-from .system import CryptographySystem
+from .system import System

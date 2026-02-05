@@ -1,9 +1,10 @@
+from .schema import SystemSchema
 
-from .schema import HealthSchema
+class System:
+    schema = SystemSchema(name=__name__)
 
-class HealthSystem:
-    def __init__(self):
-        self.schema = HealthSchema()
+    def register(self, registry):
+        registry.register(self)
 
-    def evaluate(self, intent: dict) -> dict:
-        return {"domain": "health", "status": "placeholder", "intent": intent}
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

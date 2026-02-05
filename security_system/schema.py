@@ -1,3 +1,6 @@
+from dataclasses import dataclass
 
-class SecuritySchema:
-    domain = "security"
+@dataclass
+class SystemSchema:
+    name: str
+    version: str = '0.0.1'

@@ -1,1 +1,1 @@
-from .system import PowergridSystem
+from .system import System

@@ -1,9 +1,10 @@
+from .schema import SystemSchema
 
-from .schema import CryptographySchema
+class System:
+    schema = SystemSchema(name=__name__)
 
-class CryptographySystem:
-    def __init__(self):
-        self.schema = CryptographySchema()
+    def register(self, registry):
+        registry.register(self)
 
-    def evaluate(self, intent: dict) -> dict:
-        return {"domain": "cryptography", "status": "placeholder", "intent": intent}
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

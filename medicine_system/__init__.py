@@ -1,1 +1,1 @@
-from .system import MedicineSystem
+from .system import System

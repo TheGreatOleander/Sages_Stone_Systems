@@ -1,1 +1,1 @@
-from .system import LegalSystem
+from .system import System

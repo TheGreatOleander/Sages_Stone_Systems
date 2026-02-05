@@ -1,9 +1,10 @@
+from .schema import SystemSchema
 
-from .schema import SocialSchema
+class System:
+    schema = SystemSchema(name=__name__)
 
-class SocialSystem:
-    def __init__(self):
-        self.schema = SocialSchema()
+    def register(self, registry):
+        registry.register(self)
 
-    def evaluate(self, intent: dict) -> dict:
-        return {"domain": "social", "status": "placeholder", "intent": intent}
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')

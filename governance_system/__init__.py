@@ -1,1 +1,1 @@
-from .system import GovernanceSystem
+from .system import System

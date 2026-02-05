@@ -1,3 +1,6 @@
+from dataclasses import dataclass
 
-class MythologySchema:
-    domain = "mythology"
+@dataclass
+class SystemSchema:
+    name: str
+    version: str = '0.0.1'

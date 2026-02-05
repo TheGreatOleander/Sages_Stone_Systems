@@ -1,1 +1,1 @@
-from .system import QuantumSystem
+from .system import System

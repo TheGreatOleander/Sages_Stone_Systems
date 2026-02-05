@@ -1,1 +1,1 @@
-from .system import BiologySystem
+from .system import System

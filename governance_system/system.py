@@ -1,9 +1,10 @@
+from .schema import SystemSchema
 
-from .schema import GovernanceSchema
+class System:
+    schema = SystemSchema(name=__name__)
 
-class GovernanceSystem:
-    def __init__(self):
-        self.schema = GovernanceSchema()
+    def register(self, registry):
+        registry.register(self)
 
-    def evaluate(self, intent: dict) -> dict:
-        return {"domain": "governance", "status": "placeholder", "intent": intent}
+    def execute(self, *args, **kwargs):
+        raise NotImplementedError('No execution logic defined')
