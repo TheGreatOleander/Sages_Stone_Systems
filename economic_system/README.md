@@ -1,24 +1,12 @@
-# economic_system
+# economic_system/README.md
 
-## Purpose
-This system defines a canonical truth domain within Sages Stone.
+## Economic System
 
-## Inputs
-- Explicit, schema-validated structures only.
+The Economic System records and exposes economic facts.
 
-## Outputs
-- Deterministic declarations or judgments.
+This system:
+- Tracks value-related events
+- Maintains no opinions or policies
+- Performs no optimization or enforcement
 
-## Invariants
-- No execution
-- No mutation
-- No hidden context
-
-## Failure Modes
-- SchemaViolation
-- InvariantBreach
-- AuthorityError
-
-## Canonical Status
-This system is considered canonical once invariants are satisfied
-and runtime contracts recognize it as immutable.
+Interpretation and governance occur elsewhere.

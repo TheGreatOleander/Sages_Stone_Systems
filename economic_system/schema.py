@@ -1,6 +1,7 @@
+# economic_system/schema.py
 from dataclasses import dataclass
 
-@dataclass
+
+@dataclass(frozen=True)
 class SystemSchema:
     name: str
-    version: str = '0.0.1'

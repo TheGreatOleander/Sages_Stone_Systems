@@ -1,4 +1,6 @@
+# economic_system/system.py
 from .schema import SystemSchema
+
 
 class System:
     schema = SystemSchema(name=__name__)
@@ -7,4 +9,4 @@ class System:
         registry.register(self)
 
     def execute(self, *args, **kwargs):
-        raise NotImplementedError('No execution logic defined')
+        raise NotImplementedError("No execution logic defined")

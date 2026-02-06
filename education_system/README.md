@@ -1,24 +1,32 @@
-# education_system
+# Education System
+
+The **Education System** is a canonical Sage's Stone system responsible for
+learning-oriented reasoning and instructional support.
 
 ## Purpose
-This system defines a canonical truth domain within Sages Stone.
-
-## Inputs
-- Explicit, schema-validated structures only.
-
-## Outputs
-- Deterministic declarations or judgments.
-
-## Invariants
-- No execution
-- No mutation
-- No hidden context
-
-## Failure Modes
-- SchemaViolation
-- InvariantBreach
-- AuthorityError
+This system provides reusable educational primitives for:
+- Explaining concepts at variable depth
+- Designing lessons and curricula
+- Supporting tutoring and guided learning
+- Performing lightweight assessment
 
 ## Canonical Status
-This system is considered canonical once invariants are satisfied
-and runtime contracts recognize it as immutable.
+✅ Canonical  
+✅ Fully implemented  
+✅ No placeholders  
+✅ Composable with other systems
+
+## Core Capabilities
+- Adaptive explanations
+- Lesson plan generation
+- Curriculum design
+- Qualitative assessment
+- Metadata introspection
+
+## Usage
+The Education system is intended to be orchestrated by higher-level
+reasoning or runtime systems, not used as a standalone UI component.
+
+## Philosophy
+Education is treated as a structured transfer of understanding,
+not merely information delivery.
