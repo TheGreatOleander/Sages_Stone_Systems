@@ -1,24 +1,23 @@
-# authority_judgement_system
+# authority_judgment_system
 
-## Purpose
-This system defines a canonical truth domain within Sages Stone.
+## Status
+Canonical
 
-## Inputs
-- Explicit, schema-validated structures only.
+## Scope
+Defines the structural contract for authority and judgment-governed systems.
 
-## Outputs
-- Deterministic declarations or judgments.
+## Guarantees
+- Immutable schema
+- Explicit registration
+- Explicit execution boundary
+- Deterministic lifecycle
+- No implicit behavior
 
 ## Invariants
-- No execution
-- No mutation
-- No hidden context
+- Schema must validate
+- Execution must be explicitly implemented
+- Authority domain must be declared
 
-## Failure Modes
-- SchemaViolation
-- InvariantBreach
-- AuthorityError
-
-## Canonical Status
-This system is considered canonical once invariants are satisfied
-and runtime contracts recognize it as immutable.
+## Authority
+The Charter is law.
+Runtime contracts govern execution semantics.

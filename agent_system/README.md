@@ -1,24 +1,23 @@
 # agent_system
 
-## Purpose
-This system defines a canonical truth domain within Sages Stone.
+## Status
+Canonical
 
-## Inputs
-- Explicit, schema-validated structures only.
+## Scope
+Defines the structural contract for an agent-aligned system.
 
-## Outputs
-- Deterministic declarations or judgments.
-
-## Invariants
-- No execution
-- No mutation
+## Guarantees
+- Immutable schema
+- Explicit registration
+- Explicit execution boundary
+- No implicit mutation
 - No hidden context
 
-## Failure Modes
-- SchemaViolation
-- InvariantBreach
-- AuthorityError
+## Invariants
+- Schema must validate
+- Execution must be explicitly implemented
+- No default operational behavior
 
-## Canonical Status
-This system is considered canonical once invariants are satisfied
-and runtime contracts recognize it as immutable.
+## Authority
+The Charter is law.
+Runtime contracts govern execution semantics.

@@ -1,24 +1,7 @@
-# ecology_system
+# Ecology System
 
-## Purpose
-This system defines a canonical truth domain within Sages Stone.
+Defines and maintains ecological state.
 
-## Inputs
-- Explicit, schema-validated structures only.
-
-## Outputs
-- Deterministic declarations or judgments.
-
-## Invariants
-- No execution
-- No mutation
-- No hidden context
-
-## Failure Modes
-- SchemaViolation
-- InvariantBreach
-- AuthorityError
-
-## Canonical Status
-This system is considered canonical once invariants are satisfied
-and runtime contracts recognize it as immutable.
+This system represents relationships and balances.
+It does not simulate dynamics.
+It does not optimize outcomes.

@@ -1,13 +1,26 @@
+"""
+agent_system.lifecycle
+======================
 
-class AgentSystem:
-    def __init__(self):
-        self.config = {"name": "agent_system", "version": "0.1"}
+Defines lifecycle contract for agent_system.
+"""
 
-    def initialize(self):
-        print("AgentSystem initialized")
+from typing import Protocol
 
-    def validate(self):
-        print("AgentSystem validated")
 
-    def shutdown(self):
-        print("AgentSystem shutdown")
+class Lifecycle(Protocol):
+    """
+    Lifecycle contract.
+
+    Implementations must define deterministic, side-effect
+    controlled lifecycle transitions.
+    """
+
+    def initialize(self) -> None:
+        ...
+
+    def validate(self) -> None:
+        ...
+
+    def shutdown(self) -> None:
+        ...

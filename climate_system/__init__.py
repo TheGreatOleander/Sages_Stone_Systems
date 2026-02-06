@@ -1,1 +1,3 @@
-from .system import System
+from .system import ClimateSystem
+
+__all__ = ["ClimateSystem"]

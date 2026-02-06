@@ -1,24 +1,7 @@
-# cryptography_system
+# Cryptography System
 
-## Purpose
-This system defines a canonical truth domain within Sages Stone.
+Defines and maintains cryptographic posture and allowances.
 
-## Inputs
-- Explicit, schema-validated structures only.
-
-## Outputs
-- Deterministic declarations or judgments.
-
-## Invariants
-- No execution
-- No mutation
-- No hidden context
-
-## Failure Modes
-- SchemaViolation
-- InvariantBreach
-- AuthorityError
-
-## Canonical Status
-This system is considered canonical once invariants are satisfied
-and runtime contracts recognize it as immutable.
+This system represents cryptographic constraints.
+It does not perform encryption.
+It does not manage keys.

@@ -1,10 +1,27 @@
-from .schema import SystemSchema
+from typing import FrozenSet
 
-class System:
-    schema = SystemSchema(name=__name__)
+from .schema import CryptographySchema
+from .invariants import invariant_primitives_subset
+from .lifecycle import CryptographyLifecycle
 
-    def register(self, registry):
-        registry.register(self)
 
-    def execute(self, *args, **kwargs):
-        raise NotImplementedError('No execution logic defined')
+class CryptographySystem:
+    def __init__(self, schema: CryptographySchema) -> None:
+        self._schema = schema
+        self._active_primitives: FrozenSet[str] = frozenset()
+        self._lifecycle = CryptographyLifecycle()
+
+    @property
+    def active_primitives(self) -> FrozenSet[str]:
+        return self._active_primitives
+
+    def set_primitives(self, primitives: FrozenSet[str]) -> None:
+        if not invariant_primitives_subset(
+            primitives,
+            self._schema.allowed_primitives,
+        ):
+            return
+        self._active_primitives = primitives
+
+    def permits(self, primitive: str) -> bool:
+        return primitive in self._active_primitives
