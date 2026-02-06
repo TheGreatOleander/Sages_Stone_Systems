@@ -1,23 +1,25 @@
+from sages_stone_runtime.runtime.errors import UnboundSystemError
+from sages_stone_runtime.runtime.system_base import BaseSystem
 
-import os
-import importlib
 
 class SystemRegistry:
-    def __init__(self):
-        self.systems = {}
-        self.discover_systems()
+    """
+    Single source of truth for all bound runtime systems.
+    """
 
-    def discover_systems(self, root="."):
-        for entry in os.listdir(root):
-            if entry.endswith("_system") and os.path.isdir(entry):
-                try:
-                    module_path = f"{entry}.lifecycle"
-                    module = importlib.import_module(module_path)
-                    for attr in dir(module):
-                        if attr.endswith("System"):
-                            cls = getattr(module, attr)
-                            instance = cls()
-                            self.systems[entry] = instance
-                            print(f"[Registry] Loaded {entry}")
-                except Exception as e:
-                    print(f"[Registry] Failed to load {entry}: {e}")
+    def __init__(self):
+        self.systems: dict[str, BaseSystem] = {}
+
+    def register(self, system: BaseSystem) -> None:
+        if not system.name:
+            raise UnboundSystemError(
+                "System registration failed: system.name is required"
+            )
+
+        self.systems[system.name] = system
+
+    def require(self, name: str) -> BaseSystem:
+        if name not in self.systems:
+            raise UnboundSystemError(f"Required system '{name}' not registered")
+
+        return self.systems[name]
