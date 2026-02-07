@@ -1,15 +1,29 @@
 """
-Canonical System Definition
+Example System Definition
 
-This module defines WHAT this system is.
-It contains no execution logic.
+Canonical reference system binding lifecycle and schema.
 """
 
-SYSTEM_NAME = __name__
-SYSTEM_VERSION = "1.0.0"
+from .lifecycle import ExampleSystemLifecycle
+from .schema import EXAMPLE_SCHEMA
 
-def describe():
-    return {
-        "name": SYSTEM_NAME,
-        "version": SYSTEM_VERSION,
-    }
+
+class ExampleSystem:
+    """
+    Example canonical system.
+
+    This system exists for demonstration purposes only.
+    """
+
+    def __init__(self):
+        self.lifecycle = ExampleSystemLifecycle()
+        self.schema = EXAMPLE_SCHEMA
+
+    def initialize(self) -> bool:
+        return self.lifecycle.initialize()
+
+    def validate(self) -> bool:
+        return self.lifecycle.validate()
+
+    def shutdown(self) -> bool:
+        return self.lifecycle.shutdown()

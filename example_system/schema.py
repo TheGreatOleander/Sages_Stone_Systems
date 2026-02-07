@@ -1,13 +1,18 @@
 """
-Canonical Schema
+Example System Schema
 
-Defines the valid input/output shapes and invariants.
+Defines a minimal, illustrative schema for a canonical system.
 """
 
-SCHEMA_VERSION = "1.0.0"
-
-INVARIANTS = [
-    "Inputs must be explicit",
-    "Outputs must be deterministic",
-    "No side effects permitted",
-]
+EXAMPLE_SCHEMA = {
+    "system": "example",
+    "execution": "permitted",
+    "mutation": "permitted",
+    "fields": {
+        "example_field": {
+            "type": "string",
+            "required": False,
+            "description": "Illustrative example field",
+        }
+    },
+}

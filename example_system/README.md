@@ -1,22 +1,11 @@
-# example_system
+# Example System
 
-## Purpose
-Defines the canonical behavior and invariants for this system.
+The Example System is a reference implementation used to demonstrate
+canonical system structure and expectations.
 
-## Inputs
-Explicit, schema-validated inputs only.
+It exists to:
+- show correct system layout
+- demonstrate lifecycle and invariant wiring
+- provide a safe template for new systems
 
-## Outputs
-Deterministic, auditable results.
-
-## Invariants
-- No side effects outside declared scope
-- Runtime does not mutate system definitions
-
-## Failure Modes
-- ValidationError
-- ContractViolation
-- AuthorityBoundaryBreach
-
-## Notes
-This file was auto-generated during system lockdown to ensure completeness.
+This system is intentionally minimal and non-authoritative.

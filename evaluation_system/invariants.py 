@@ -1,0 +1,45 @@
+"""
+Evaluation System Invariants
+
+Non-negotiable truths that must hold for the Evaluation System.
+"""
+
+
+class InvariantViolation(Exception):
+    """Raised when an evaluation invariant is violated."""
+
+
+def no_execution():
+    raise InvariantViolation(
+        "Evaluation system must not execute logic or perform computation."
+    )
+
+
+def no_state_mutation():
+    raise InvariantViolation(
+        "Evaluation system must not mutate state or external context."
+    )
+
+
+def no_decision_authority():
+    raise InvariantViolation(
+        "Evaluation system must not make decisions or produce outcomes."
+    )
+
+
+def no_hidden_dependencies():
+    raise InvariantViolation(
+        "Evaluation system must not rely on implicit or hidden dependencies."
+    )
+
+
+def evaluation_invariants():
+    """
+    Return all invariants required for the Evaluation System.
+    """
+    return [
+        no_execution,
+        no_state_mutation,
+        no_decision_authority,
+        no_hidden_dependencies,
+    ]

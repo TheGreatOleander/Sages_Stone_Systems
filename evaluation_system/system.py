@@ -1,10 +1,29 @@
-from .schema import SystemSchema
+"""
+Evaluation System Definition
 
-class System:
-    schema = SystemSchema(name=__name__)
+Binds lifecycle, schema, and invariants into a canonical system shell.
+"""
 
-    def register(self, registry):
-        registry.register(self)
+from .lifecycle import EvaluationSystemLifecycle
+from .schema import EVALUATION_SCHEMA
 
-    def execute(self, *args, **kwargs):
-        raise NotImplementedError('No execution logic defined')
+
+class EvaluationSystem:
+    """
+    Canonical Evaluation System.
+
+    Declares evaluation posture without executing evaluation.
+    """
+
+    def __init__(self):
+        self.lifecycle = EvaluationSystemLifecycle()
+        self.schema = EVALUATION_SCHEMA
+
+    def initialize(self) -> bool:
+        return self.lifecycle.initialize()
+
+    def validate(self) -> bool:
+        return self.lifecycle.validate()
+
+    def shutdown(self) -> bool:
+        return self.lifecycle.shutdown()

@@ -1,15 +1,26 @@
+"""
+Example System Lifecycle
 
-class ExampleSystem:
-    def initialize(self):
-        print("ExampleSystem initialized")
+Demonstrates a canonical lifecycle implementation.
+"""
 
-    def validate(self):
-        print("ExampleSystem validated")
+from .invariants import example_invariants
 
-    def shutdown(self):
-        print("ExampleSystem shutdown")
 
-    def invariants(self):
-        return [
-            lambda: print("Example invariant check passed")
-        ]
+class ExampleSystemLifecycle:
+    """
+    Lifecycle for the Example System.
+
+    This lifecycle is intentionally simple.
+    """
+
+    def initialize(self) -> bool:
+        return True
+
+    def validate(self) -> bool:
+        for invariant in example_invariants():
+            invariant()
+        return True
+
+    def shutdown(self) -> bool:
+        return True
