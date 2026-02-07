@@ -1,8 +1,24 @@
-# Identity System
+# identity_system
 
-Defines and maintains identity state.
+## Purpose
+This system defines a canonical truth domain within Sages Stone.
 
-This system represents who or what an entity is.
-It does not authenticate.
-It does not authorize.
-It does not act.
+## Inputs
+- Explicit, schema-validated structures only.
+
+## Outputs
+- Deterministic declarations or judgments.
+
+## Invariants
+- No execution
+- No mutation
+- No hidden context
+
+## Failure Modes
+- SchemaViolation
+- InvariantBreach
+- AuthorityError
+
+## Canonical Status
+This system is considered canonical once invariants are satisfied
+and runtime contracts recognize it as immutable.

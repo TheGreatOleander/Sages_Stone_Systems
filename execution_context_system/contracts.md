@@ -1,0 +1,2 @@
+- Execution must be explicit
+- No hidden side effects
